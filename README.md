@@ -28,7 +28,7 @@ Now the debugger should stop at the specified breakpoint, but it doesn't.
 ### 🚧 Workaround
 
 1. Install the VSCode extension [JavaScript Debugger (Nightly)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug-nightly) (`ms-vscode.js-debug-nightly`)
-1. In `.vscode\settings.json` set `debug.node.useV3` to `false`
+1. In `.vscode\settings.json` set `debug.node.useV3` to `true`
 1. Press `F5` to start debugging
 
 Now the debugger does in fact stop at the specified breakpoint.
