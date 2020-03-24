@@ -1,19 +1,6 @@
-# 📄 template-node-ts
+# 🐞 bug-vscode-js-debugger-breakpoints
 
-Project Template for creating Node.js apps with TypeScript
-
-## ⭐ Features
-
-- Code in TypeScript
-- Run TypeScript code using `ts-node`
-- Built-in tasks using npm scripts
-- Integration with Visual Studio Code
-  - Settings
-  - Tasks
-  - Debuging
-  - Extensions
-    - Automatic code checking with ESLint
-    - Automatic code formatting and fixing with Prettier
+Minimal working example for reproducing a bug when debugging in ts-node with Visual Studio Code
 
 ## 🛠️ Development
 
@@ -22,54 +9,32 @@ These instructions will get you a copy of this project up and running on your lo
 ### 📋 Prerequisites
 
 - [Node.js](https://nodejs.org) - JavaScript run-time environment
-  - After installing it, use `npm i` in the project's root folder to install all dependencies
+- [Visual Studio Code](https://code.visualstudio.com/) - Code editor redefined and optimized for building and debugging modern web and cloud applications
 
-#### Visual Studio Code Extensions
+### 🚀 Getting Started
 
-This project is intended to be used with Visual Studio Code and the following extensions are recommended:
+Follow these steps to reproduce the bug:
 
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint JavaScript into VS Code
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter using prettier
+1. Open the project in VSCode
+1. Run `npm i` in the terminal to install all dependencies
+1. Set a breakpoint in `src/lib.ts` on line `4`
+1. Switch to the `Run` view using the side menu
+1. Select the run configuration `Launch with ts-node`
+1. Press `F5` to start debugging
 
-### 🚀 Built-in Tasks
+Now the debugger should stop at the specified breakpoint, but it doesn't.
 
-This project uses npm scripts for running tasks:
+### 🚧 Workaround
 
-```bash
-# lint the project using eslint
-npm run lint
+1. Install the VSCode extension [JavaScript Debugger (Nightly)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug-nightly) (`ms-vscode.js-debug-nightly`)
+1. In `.vscode\settings.json` set `debug.node.useV3` to `false`
+1. Press `F5` to start debugging
 
-# removes the generated folder
-npm run clean
-
-# build the project
-# (includes clean and lint)
-npm run build
-
-# build the project without linting
-# (includes clean)
-npm run build-only
-
-# run TypeScript code using ts-node
-npm run start:ts
-# or just
-npm start
-
-# run generated JavaScript code using node
-# (does NOT include build)
-npm run start:js
-
-# publish the project
-# (includes build)
-npm publish
-```
-
-VS Code tasks are also included for `lint`, `build`, `build-only`, `start:ts` and `start:js`.
+Now the debugger does in fact stop at the specified breakpoint.
 
 ## 🧰 Built With
 
 - [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript
-- [ESLint](https://eslint.org/) - Find and fix problems in your JavaScript code
 - [ts-node](https://github.com/TypeStrong/ts-node) - TypeScript execution and REPL for node.js
 
 ## 👨‍💻 Authors

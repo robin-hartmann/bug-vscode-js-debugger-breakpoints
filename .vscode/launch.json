@@ -4,11 +4,21 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch with ts-node",
+      "program": "${workspaceFolder}/src/bin.ts",
       "runtimeArgs": ["-r", "ts-node/register"],
-      "args": ["${workspaceFolder}/src/bin/bin.ts"],
-      "env": { "TS_NODE_PROJECT": "tsconfig.json" },
-      "console": "integratedTerminal"
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      },
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch with node",
+      "program": "${workspaceFolder}/dist/bin.js",
+      "outFiles": ["${workspaceFolder}/dist/**/*"],
+      "internalConsoleOptions": "openOnSessionStart"
     }
   ]
 }
