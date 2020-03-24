@@ -15,7 +15,8 @@ These instructions will get you a copy of this project up and running on your lo
 
 Follow these steps to reproduce the bug:
 
-1. Open the project in VSCode
+1. Clone this project
+1. Open the project's root folder in VSCode
 1. Run `npm i` in the terminal to install all dependencies
 1. Set a breakpoint in `src/lib.ts` on line `4`
 1. Switch to the `Run` view using the side menu
