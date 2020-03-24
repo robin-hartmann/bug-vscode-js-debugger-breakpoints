@@ -1,10 +1,10 @@
 {
-  "name": "bug-vscode-js-debugger-breakpoints",
+  "name": "bug-vscode-node-debug2-breakpoints",
   "version": "0.1.0",
   "description": "Minimal working example for reproducing a bug when debugging in ts-node with Visual Studio Code",
   "author": "contact.robin.hartmann@gmail.com",
   "license": "MIT",
-  "repository": "github:robin-hartmann/bug-vscode-js-debugger-breakpoints",
+  "repository": "github:robin-hartmann/bug-vscode-node-debug2-breakpoints",
   "devDependencies": {
     "shx": "^0.3.2",
     "ts-node": "^8.8.1",

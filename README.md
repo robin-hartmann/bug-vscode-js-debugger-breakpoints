@@ -1,4 +1,4 @@
-# 🐞 bug-vscode-js-debugger-breakpoints
+# 🐞 bug-vscode-node-debug2-breakpoints
 
 Minimal working example for reproducing a bug when debugging in ts-node with Visual Studio Code
 
