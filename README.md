@@ -16,7 +16,7 @@ These instructions will get you a copy of this project up and running on your lo
 Follow these steps to reproduce the bug:
 
 1. Clone this project
-1. Open the project's root folder in VSCode
+1. Open the project's root folder in VS Code
 1. Run `npm i` in the terminal to install all dependencies
 1. Set a breakpoint in `src/lib.ts` on line `4`
 1. Switch to the `Run` view using the side menu
@@ -27,7 +27,7 @@ Now the debugger should stop at the specified breakpoint, but it doesn't.
 
 ### 🚧 Workaround
 
-1. Install the VSCode extension [JavaScript Debugger (Nightly)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug-nightly) (`ms-vscode.js-debug-nightly`)
+1. Install the VS Code extension [JavaScript Debugger (Nightly)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug-nightly) (`ms-vscode.js-debug-nightly`)
 1. In `.vscode\settings.json` set `debug.node.useV3` to `true`
 1. Press `F5` to start debugging
 
